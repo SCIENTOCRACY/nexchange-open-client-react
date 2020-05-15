@@ -143,6 +143,7 @@ export const HeaderStuff = props => {
                     {t('header.apidocs')}
                   </a>
                 </li>
+              </ul>
             </div>
 
             <Support show={supportModal} onClose={() => hideSupport()} />
