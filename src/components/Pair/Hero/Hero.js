@@ -87,7 +87,7 @@ class Hero extends Component {
                       </h1>
                       <Trans i18nKey="hero.2">
                         <h2>
-                          Simple. <span className="text-green">Secure</span>. Transparent.
+                          Simple. <span className="text-green">Bold.</span> Secure.
                       </h2>
                       </Trans>
                     </div>
