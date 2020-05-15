@@ -22,8 +22,9 @@ const About = () => (
                   This exchange is based on open sourced software by {' '}
                   <a href="https://n.exchange/en" target="_blank" rel="noopener noreferrer">
                     N.exchange
-                  </a>.
+                  </a>
                 </p>
+              </div>
               </Trans>
             </div>
           </div>
