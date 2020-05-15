@@ -5,9 +5,7 @@ import { bindActionCreators } from 'redux';
 import { fetchCoinDetails, fetchPairs, changeOrderMode } from 'Actions';
 import Hero from './Hero/Hero';
 import About from './About/About';
-import Testimonials from './Testimonials/Testimonials';
 import RecentOrders from './RecentOrders/RecentOrders';
-import SubscriptionForm from './SubscriptionForm/SubscriptionForm';
 
 export class Home extends Component {
   componentDidMount() {
@@ -31,9 +29,7 @@ export class Home extends Component {
       <div>
         <Hero {...this.props} />
         <RecentOrders />
-        <Testimonials />
         <About />
-        <SubscriptionForm />
       </div>
     );
   }

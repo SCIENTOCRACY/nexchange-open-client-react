@@ -11,7 +11,6 @@ import { bindActionCreators } from 'redux';
 import UserIcon from './user.svg';
 
 import Support from './Support/Support';
-import LanguagePicker from './LanguagePicker/LanguagePicker';
 import { loadAuth, loadUserDetails, showSupportModal } from 'Actions';
 
 import styles from './Header.scss';
@@ -119,11 +118,6 @@ export const HeaderStuff = props => {
                   </HashLink>
                 </li>
 
-                <li>
-                  <Link onClick={() => closeNavbar()} to={`/${lang}/faqs`} className={styles.link} data-test="faq-btn">
-                    {t('header.faq')}
-                  </Link>
-                </li>
 
                 {/* <li>
                   <Link onClick={() => closeNavbar()} to="/pricecomparsion" className={styles.link} data-test="pricecomparsion-btn">
@@ -156,35 +150,6 @@ export const HeaderStuff = props => {
                   </Link>
                 </li> */}
 
-                <li>
-                  <Link
-                    onClick={() => {
-                      closeNavbar();
-                      props.showSupportModal(true);
-                    }}
-                    className={styles.link}
-                    to="#"
-                    data-test="support-btn"
-                  >
-                    {t('header.support')}
-                  </Link>
-                </li>
-
-                <li className={styles['ico-link']}>
-                  <a
-                    href="https://n.exchange/ico"
-                    className={`${styles.btn} btn btn-block btn-primary`}
-                    onClick={() => {
-                      window.gtag('event', 'ICO open', { event_category: 'ICO', event_label: `` });
-                    }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-test="ico-link"
-                  >
-                    {t('header.ico')}
-                  </a>
-                </li>
-
                 {(props.auth && props.auth.profile && props.auth.profile.username && (
                   <li>
                     <Link className={styles.link} to={`/${lang}/profile/me`}>
@@ -205,8 +170,6 @@ export const HeaderStuff = props => {
                     </li>
                   </>
                 )}
-
-                <LanguagePicker />
 
                 <li id="social-mobile">
                   <a

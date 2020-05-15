@@ -10,8 +10,6 @@ import { showSupportModal } from 'Actions';
 
 import styled from '@emotion/styled';
 
-const paymentGateways = ['mastercard', 'visa'];
-const aggregators = ['bestchange', 'okchanger', 'kurs', 'exchangesumo', 'emon', 'allchange', 'bestcurs'];
 
 const Footer = props => {
   const { location } = props;
@@ -47,96 +45,22 @@ const Footer = props => {
                 <section className="links">
                   <main className="">
                     <section>
-                      <h4>{t('header.resources')}</h4>
-                      <ul>
-                        <li>
-                          <Link to={`/${lang}/instant-white-label`}>
-                            <strong>{t('header.whitelabel')}</strong>
-                          </Link>
-                        </li>
-                        <li>
-                          <a href="https://nexchange2.docs.apiary.io/">{t('header.apidocumentation')}</a>
-                        </li>
-                        <li>
-                          <Link
-                            onClick={() => {
-                              props.showSupportModal(true);
-                            }}
-                            to="#"
-                          >
-                            {t('header.support')}
-                          </Link>
-                        </li>
-                      </ul>
-                    </section>
-                    <section>
                       <h4>{t('header.about')}</h4>
                       <ul>
                         <li>
                           <HashLink smooth to={`/${lang}#about`}>{t('header.about')}</HashLink>
                         </li>
                         <li>
-                          <Link to={`/${lang}/faqs`}>{t('header.faq')}</Link>
+                             <a href="https://n.exchange" target="_blank" rel="noopener noreferrer">N.exchange</a>
                         </li>
-                        <li>
-                          <span />
-                        </li>
+
                       </ul>
                     </section>
                     <section>
                       <h4>{t('footer.popular-pairs')}</h4>
                       <PopularPairs lang={lang} />
                     </section>
-                    <section>
-                      <h4>{t('header.social')}</h4>
-                      <ul>
-                        <li>
-                          <a href="/twitter" target="_blank" rel="noopener noreferrer">
-                            {t('header.twitter')}
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/fb" target="_blank" rel="noopener noreferrer">
-                            {t('header.facebook')}
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/slack" target="_blank" rel="noopener noreferrer">
-                            {t('header.slack')}
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/telegram" target="_blank" rel="noopener noreferrer">
-                            {t('header.telegram')}
-                          </a>
-                        </li>
-                      </ul>
-                    </section>
                   </main>
-                  <aside>
-                    <div className="compliance">
-                      {paymentGateways.map(e => (
-                        <img src={`/img/compliance/${e}.svg`} alt="e" className={e} key={e} />
-                      ))}
-                    </div>
-
-                    <div className="compliance2">
-                      {aggregators.map(e => (
-                        <a href={t(`footer.aggregators.${e}.url`)} target="_blank" rel="noopener noreferrer" key={e}>
-                          <img src={`/img/compliance/${e}.svg`} alt={t(`footer.aggregators.${e}.name`)} className={e} />
-                        </a>
-                      ))}
-                    </div>
-
-                    <p>
-                      <CopyrightNotice /> — <RegisteredCompany />
-                    </p>
-                    <p>
-                      <Link to={`/${lang}/terms-and-conditions`}>{t('header.terms-and-conditions')}</Link>
-                      <span> — </span>
-                      <Link to={`/${lang}/privacy`}>{t('header.privacy-policy')}</Link>
-                    </p>
-                  </aside>
                 </section>
               </StyledFooter>
             )}
@@ -177,12 +101,7 @@ const PopularPairs = ({ lang }) => {
   );
 };
 
-const CopyrightNotice = () => <>All rights reserved, YOA LTD 2016-{new Date().getFullYear()} — England & Wales</>;
 
-const RegisteredCompany = props => (
-  <a href="https://beta.companieshouse.gov.uk/company/10009845" rel="noopener noreferrer" target="_blank">
-    registered company No. 10009845
-  </a>
 );
 
 const StyledFooter = styled.footer`
