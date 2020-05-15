@@ -102,8 +102,6 @@ const PopularPairs = ({ lang }) => {
 };
 
 
-);
-
 const StyledFooter = styled.footer`
   > section {
     padding: 12px 0;

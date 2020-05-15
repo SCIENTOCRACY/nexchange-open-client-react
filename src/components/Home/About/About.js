@@ -24,8 +24,6 @@ const About = () => (
                     N.exchange
                   </a>
                 </p>
-              </div>
-              </Trans>
             </div>
           </div>
         </div>
