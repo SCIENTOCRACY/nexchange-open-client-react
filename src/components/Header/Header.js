@@ -8,7 +8,6 @@ import i18n from 'i18next';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import UserIcon from './user.svg';
 
 import Support from './Support/Support';
 import { loadAuth, loadUserDetails, showSupportModal } from 'Actions';
