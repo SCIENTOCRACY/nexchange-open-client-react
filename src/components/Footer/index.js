@@ -102,6 +102,7 @@ const PopularPairs = ({ lang }) => {
 };
 
 
+);
 
 const StyledFooter = styled.footer`
   > section {
